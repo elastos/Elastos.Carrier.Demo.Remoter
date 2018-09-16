@@ -36,8 +36,8 @@
 		17FBAD981E543DD000289C1E /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBAD971E543DD000289C1E /* DeviceInfoViewController.swift */; };
 		97A516FBDB1A9AE56ACC719A /* Pods_CarrierDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF30B8428FCD1413320231 /* Pods_CarrierDemo.framework */; };
 		A310D7AC209411DF00FF0703 /* options.plist in Resources */ = {isa = PBXBuildFile; fileRef = A310D7AB209411DF00FF0703 /* options.plist */; };
-		A359018720A1811A006310FF /* ElastosCarrier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A359018620A1811A006310FF /* ElastosCarrier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3918F422090C2F600BE4486 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3918F412090C2F600BE4486 /* StoreKit.framework */; };
+		A3E2E44C214E3F2900865E92 /* ElastosCarrier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A359018620A1811A006310FF /* ElastosCarrier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A359018720A1811A006310FF /* ElastosCarrier.framework in Embed Frameworks */,
+				A3E2E44C214E3F2900865E92 /* ElastosCarrier.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;

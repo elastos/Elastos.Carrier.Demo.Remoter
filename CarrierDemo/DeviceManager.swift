@@ -388,7 +388,7 @@ extension DeviceManager : CarrierDelegate
             myInfo.name = UIDevice.current.name
             try? carrier.setSelfUserInfo(myInfo)
         }
-        try! _ = CarrierSessionManager.getInstance(carrier: carrier, handler: didReceiveSessionRequest)
+        try! _ = CarrierSessionManager.getInstance(carrier: carrier, bundle: nil, handler: didReceiveSessionRequest)
 
     }
     
@@ -496,11 +496,10 @@ extension DeviceManager : CarrierDelegate
     
     public func didReceiveFriendMessage(_ carrier: Carrier,
                                         _ from: String,
-                                        _ message: String) {
+                                        _ message: Data) {
         print("didReceiveFriendMessage : \(message)")
         do {
-            let data = message.data(using: .utf8)
-            let decoded = try JSONSerialization.jsonObject(with: data!, options: [])
+            let decoded = try JSONSerialization.jsonObject(with: message, options: [])
             let dict = decoded as! [String: Any]
             let msgType = dict["type"] as! String
             switch msgType {
@@ -585,7 +584,7 @@ extension DeviceManager : CarrierDelegate
         print("didReceiveFriendInviteRequest")
     }
     
-    public func didReceiveSessionRequest(carrier: Carrier, from: String, sdp: String) {
+    public func didReceiveSessionRequest(carrier: Carrier, _ : String?, from: String, sdp: String) {
         let deviceId = from.components(separatedBy: "@")[0]
         let device = self.devices.first(where: {$0.deviceId == deviceId})
         _ = device!.didReceiveSessionInviteRequest(carrier: carrier, sdp: sdp)
