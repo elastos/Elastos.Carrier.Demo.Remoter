@@ -107,11 +107,11 @@ class DeviceManager : NSObject {
                 options.udpEnabled = true
                 options.persistentLocation = carrierDirectory
                 
-                try Carrier.initializeInstance(options: options, delegate: self)
+                try Carrier.initializeSharedInstance(options: options, delegate: self)
                 print("carrier instance created")
                 
                 networkManager = nil
-                carrierInst = Carrier.getInstance()
+                carrierInst = Carrier.sharedInstance()
 
                 try! carrierInst.start(iterateInterval: 1000)
                 print("carrier started, waiting for ready")
@@ -357,7 +357,7 @@ class DeviceManager : NSObject {
             try sendMessage(message, toDeviceId: device.deviceId)
         }
         else {
-            throw CarrierError.InternalError(errno:1)
+            throw CarrierError.GeneralError(ecode:1)
         }
     }
     
@@ -388,7 +388,8 @@ extension DeviceManager : CarrierDelegate
             myInfo.name = UIDevice.current.name
             try? carrier.setSelfUserInfo(myInfo)
         }
-        try! _ = CarrierSessionManager.getInstance(carrier: carrier, bundle: nil, handler: didReceiveSessionRequest)
+//        try! _ = CarrierSessionManager.sharedInstance(carrier: carrier, bundle: nil, handler: didReceiveSessionRequest)
+        try! _ = CarrierSessionManager.initializeSharedInstance(carrier: carrier)
 
     }
     
