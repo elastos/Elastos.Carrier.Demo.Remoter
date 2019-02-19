@@ -34,8 +34,6 @@
 		17C5082F1E13C2AB0068A76A /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C5082E1E13C2AB0068A76A /* ScanViewController.m */; };
 		17C508631E1BAA7D0068A76A /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C508621E1BAA7D0068A76A /* MyInfoViewController.swift */; };
 		17FBAD981E543DD000289C1E /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBAD971E543DD000289C1E /* DeviceInfoViewController.swift */; };
-		2747110C221BC8B200EFDE31 /* ElastosCarrier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2747110B221BC8B200EFDE31 /* ElastosCarrier.framework */; };
-		2747110D221BC8B200EFDE31 /* ElastosCarrier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2747110B221BC8B200EFDE31 /* ElastosCarrier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97A516FBDB1A9AE56ACC719A /* Pods_CarrierDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADF30B8428FCD1413320231 /* Pods_CarrierDemo.framework */; };
 		A310D7AC209411DF00FF0703 /* options.plist in Resources */ = {isa = PBXBuildFile; fileRef = A310D7AB209411DF00FF0703 /* options.plist */; };
 		A3918F422090C2F600BE4486 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3918F412090C2F600BE4486 /* StoreKit.framework */; };
@@ -48,7 +46,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2747110D221BC8B200EFDE31 /* ElastosCarrier.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +187,6 @@
 		17C5082E1E13C2AB0068A76A /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		17C508621E1BAA7D0068A76A /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		17FBAD971E543DD000289C1E /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
-		2747110B221BC8B200EFDE31 /* ElastosCarrier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ElastosCarrier.framework; sourceTree = "<group>"; };
 		83BA379AEDC5DE0C0C5309AA /* Pods-CarrierDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrierDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8503E4E4167EFE9BAA2B542C /* Pods-CarrierDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarrierDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A310D7AB209411DF00FF0703 /* options.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = options.plist; sourceTree = "<group>"; };
@@ -210,7 +206,6 @@
 				179C62E41F160ED500B1E271 /* libavdevice.a in Frameworks */,
 				179C62E51F160ED500B1E271 /* libavfilter.a in Frameworks */,
 				179C62E61F160ED500B1E271 /* libavformat.a in Frameworks */,
-				2747110C221BC8B200EFDE31 /* ElastosCarrier.framework in Frameworks */,
 				179C62E71F160ED500B1E271 /* libavutil.a in Frameworks */,
 				179C62E81F160ED500B1E271 /* libswresample.a in Frameworks */,
 				179C62E91F160ED500B1E271 /* libswscale.a in Frameworks */,
@@ -426,7 +421,6 @@
 		17C5080E1E139F990068A76A = {
 			isa = PBXGroup;
 			children = (
-				2747110B221BC8B200EFDE31 /* ElastosCarrier.framework */,
 				17C508191E139F990068A76A /* CarrierDemo */,
 				17C508181E139F990068A76A /* Products */,
 				605E9172420CBC98EFEE411E /* Pods */,
@@ -821,11 +815,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = iphonesimulator;
+				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CarrierDemo/CarrierDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -854,10 +848,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = iphonesimulator;
+				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CarrierDemo/CarrierDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
