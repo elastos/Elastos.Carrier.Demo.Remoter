@@ -388,7 +388,6 @@ extension DeviceManager : CarrierDelegate
             myInfo.name = UIDevice.current.name
             try? carrier.setSelfUserInfo(myInfo)
         }
-//        try! _ = CarrierSessionManager.sharedInstance(carrier: carrier, bundle: nil, handler: didReceiveSessionRequest)
         try! _ = CarrierSessionManager.initializeSharedInstance(carrier: carrier)
 
     }

@@ -135,7 +135,6 @@ extension Device : CarrierStreamDelegate
                     return false
                 }
                 
-//                try session!.replyInviteRequest(nil, with: 0, reason: nil)
                 try session!.replyInviteRequest(with: 0, reason: nil)
                 semaphore?.wait()
                 guard state == .TransportReady else {
@@ -146,7 +145,6 @@ extension Device : CarrierStreamDelegate
                 return true
             }
             else if state == .TransportReady {
-//                try session!.replyInviteRequest(nil, with: 0, reason: nil)
                 try session!.replyInviteRequest(with: 0, reason: nil)
                 try session!.start(remoteSdp: sdp)
                 return true
@@ -190,7 +188,6 @@ extension Device : VideoDecoderDelegate
                     return false
                 }
                 
-//                try session!.sendInviteRequest(nil, handler: didReceiveSessionInviteResponse)
                 try session!.sendInviteRequest(handler: didReceiveSessionInviteResponse)
                 semaphore?.wait()
                 guard state == .TransportReady else {
@@ -205,7 +202,6 @@ extension Device : VideoDecoderDelegate
                 NSLog("start session success")
             }
             else if state == .TransportReady {
-//                try session!.sendInviteRequest(nil, handler: didReceiveSessionInviteResponse)
                 try session!.sendInviteRequest(handler: didReceiveSessionInviteResponse)
             }
             else if state == .Connected {
@@ -231,7 +227,6 @@ extension Device : VideoDecoderDelegate
         if status == 0 {
             NSLog("didReceiveSessionInviteResponse success")
             didReceiveSessionResponse = true;
-//            remoteSdp = sdp;
         } else {
             NSLog("didReceiveSessionInviteResponse failed with reason: \(reason!)")
             videoPlayView = nil
