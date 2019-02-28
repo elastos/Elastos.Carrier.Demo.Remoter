@@ -99,7 +99,7 @@ class DeviceManager : NSObject {
                 bootstrapNode.publicKey = "5tuHgK1Q4CYf4K5PutsEPK5E3Z7cbtEBdx7LwmdzqXHL"
                 options.bootstrapNodes?.append(bootstrapNode)
 
-                bootstrapNode.ipv4 = "52.80.187.125"
+                bootstrapNode.ipv4 = "52.83.191.228"
                 bootstrapNode.port = "33445"
                 bootstrapNode.publicKey = "3khtxZo89SBScAMaHhTvD68pPHiKxgZT6hTCSZZVgNEm"
                 options.bootstrapNodes?.append(bootstrapNode)
@@ -388,8 +388,7 @@ extension DeviceManager : CarrierDelegate
             myInfo.name = UIDevice.current.name
             try? carrier.setSelfUserInfo(myInfo)
         }
-        try! _ = CarrierSessionManager.initializeSharedInstance(carrier: carrier)
-
+        try! _ = CarrierSessionManager.initializeSharedInstance(carrier: carrier, sessionRequestHandler: didReceiveSessionRequest)
     }
     
     public func selfUserInfoDidChange(_ carrier: Carrier,
@@ -584,7 +583,7 @@ extension DeviceManager : CarrierDelegate
         print("didReceiveFriendInviteRequest")
     }
     
-    public func didReceiveSessionRequest(carrier: Carrier, _ : String?, from: String, sdp: String) {
+    public func didReceiveSessionRequest(carrier: Carrier, from: String, sdp: String) {
         let deviceId = from.components(separatedBy: "@")[0]
         let device = self.devices.first(where: {$0.deviceId == deviceId})
         _ = device!.didReceiveSessionInviteRequest(carrier: carrier, sdp: sdp)
