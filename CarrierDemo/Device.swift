@@ -219,7 +219,7 @@ extension Device : VideoDecoderDelegate
         }
     }
     
-    private func didReceiveSessionInviteResponse(session: CarrierSession, status: Int, _: String?, reason: String?) {
+    private func didReceiveSessionInviteResponse(session: CarrierSession, status: Int, reason: String?, sdp: String?) {
         guard state == .TransportReady else {
             return
         }
@@ -227,6 +227,7 @@ extension Device : VideoDecoderDelegate
         if status == 0 {
             NSLog("didReceiveSessionInviteResponse success")
             didReceiveSessionResponse = true;
+            remoteSdp = sdp
         } else {
             NSLog("didReceiveSessionInviteResponse failed with reason: \(reason!)")
             videoPlayView = nil
