@@ -507,7 +507,6 @@
 				17C508141E139F990068A76A /* Frameworks */,
 				17C508151E139F990068A76A /* Resources */,
 				17C508341E13C3310068A76A /* Embed Frameworks */,
-				D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */,
 				170720FA1E8116D10030AAED /* Report warning for TODO & FIXME comments */,
 			);
 			buildRules = (
@@ -592,25 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.cpp\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
-		};
-		D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.cpp\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
 		};
 		F7AD7CD045908BACE99BEA99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
