@@ -5,4 +5,5 @@ use_frameworks!
 target 'CarrierDemo' do
     project 'CarrierDemo.xcodeproj'
     pod 'QRCode', '~> 2.0'
+    pod 'ElastosCarrierSDK'
 end
