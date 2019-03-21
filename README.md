@@ -1,9 +1,9 @@
 Elastos.Carrier.Demo.Remoter
 ============================
 
-Carrier Demo is a demo application to show what can do over carrier network. It shows you can use this app to control each other via NAT traversal.
+Carrier Demo is a demo application to show what can do via elastos carrier network. It shows you can use this app to control each other even inside NAT traversal.
 
-## Feaures:
+## Features:
 
 The items for remote control currently includes:
 
@@ -17,7 +17,7 @@ The items for remote control currently includes:
 You should get source code from the following repository on github.com:
 
 ```shell
-$ git clone https://github.com/stiartsly/CarrierDemo.git
+$ git clone https://github.com/elastos/Elastos.NET.Carrier.Demo.Remoter.iOS.git CarrierDemo
 $ cd CarrierDemo
 $ open -a Xcode CarrierDemo.xcworkspace
 ```
@@ -25,13 +25,13 @@ Then you can use Apple Xcode to build it.
 
 ## Build dependencies
 
-Before buiding app, you have to download and build the following dependencies:
+The dependencies to CarrierDemo have been outlined below:
 
 - ElastosCarrier.framework
 - ffmpeg
 - QRCode
 
-As to QRcode, you need to use following command to install and build distrbution
+Before to use Xcode to build distributions, run the following commands to install all needed dependencies:
 
 ```shell
 $ sudo gem install cocoapods  
@@ -45,4 +45,3 @@ Run on Phone with iOS version 9.0 or higher.
 ## License
 
 MIT
-
