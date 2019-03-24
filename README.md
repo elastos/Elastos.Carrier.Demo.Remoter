@@ -19,7 +19,6 @@ You should get source code from the following repository on github.com:
 ```shell
 $ git clone https://github.com/elastos/Elastos.NET.Carrier.Demo.Remoter.iOS.git CarrierDemo
 $ cd CarrierDemo
-$ open -a Xcode CarrierDemo.xcworkspace
 ```
 Then you can use Apple Xcode to build it.
 
@@ -34,8 +33,14 @@ The dependencies to CarrierDemo have been outlined below:
 Before to use Xcode to build distributions, run the following commands to install all needed dependencies:
 
 ```shell
-$ sudo gem install cocoapods  
+$ sudo gem install cocoapods
 $ pod install
+```
+
+Finally, use **Xcode** to open project file **CarrierDemo.xcworkspace** or directly run the following command to open it so as to build the whole workspace:
+
+```shell
+$ open -a Xcode.app CarrierDemo.xcworkspace
 ```
 
 ## Deploy && Run

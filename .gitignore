@@ -1,6 +1,5 @@
 .DS_store
 DerivedData
-Podfile.lock
 Pods
 /build
 CarrierDemo.xcodeproj/xcuserdata
