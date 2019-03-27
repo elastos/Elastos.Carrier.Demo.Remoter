@@ -137,7 +137,7 @@ extension DeviceListViewController {
         return indexPath.row > 0
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return indexPath.row > 0 ? .delete : .none
     }
 }
@@ -148,7 +148,7 @@ extension DeviceListViewController {
         cell.separatorInset = tableView.separatorInset;
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if indexPath.row <= DeviceManager.sharedInstance.devices.count {
                 let device = DeviceManager.sharedInstance.devices[indexPath.row-1]
