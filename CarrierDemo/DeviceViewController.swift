@@ -400,7 +400,7 @@ class DeviceViewController: UITableViewController {
                 videoView!.backgroundColor = UIColor.clear
                 videoView!.contentMode = .scaleAspectFill
                 self.videoContentView.addSubview(videoView!)
-                self.videoContentView.bringSubview(toFront: self.videoPlayButton)
+                self.videoContentView.bringSubviewToFront(self.videoPlayButton)
             }
 
             if videoLayer == nil {
