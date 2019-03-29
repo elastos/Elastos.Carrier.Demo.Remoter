@@ -116,8 +116,8 @@ class DeviceManager : NSObject {
                 try! carrierInst.start(iterateInterval: 1000)
                 print("carrier started, waiting for ready")
                 
-                NotificationCenter.default.addObserver(forName: .UIApplicationWillResignActive, object: nil, queue: OperationQueue.main, using: didEnterBackground)
-                NotificationCenter.default.addObserver(forName: .UIScreenBrightnessDidChange, object: nil, queue: OperationQueue.main, using: brightnessDidChanged)
+                NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: OperationQueue.main, using: didEnterBackground)
+                NotificationCenter.default.addObserver(forName: UIScreen.brightnessDidChangeNotification, object: nil, queue: OperationQueue.main, using: brightnessDidChanged)
             }
             catch {
                 NSLog("Start carrier instance error : \(error.localizedDescription)")
@@ -271,7 +271,7 @@ class DeviceManager : NSObject {
         else {
             if audioPlayer == nil {
                 do {
-                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
                     let _ = try AVAudioSession.sharedInstance().setActive(true)
                 } catch let error as NSError {
                     print("an error occurred when audio session category.\n \(error)")
@@ -284,7 +284,7 @@ class DeviceManager : NSObject {
             }
             
             audioPlayer!.play()
-            NotificationCenter.default.addObserver(self, selector: #selector(audioSessionInterrupted), name: .AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
+            NotificationCenter.default.addObserver(self, selector: #selector(audioSessionInterrupted), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
             
             let messageDic = ["type":"sync", "ring":true] as [String : Any]
             NotificationCenter.default.post(name: DeviceManager.DeviceStatusChanged, object: nil, userInfo: messageDic)
@@ -306,7 +306,7 @@ class DeviceManager : NSObject {
                 player.stop()
             }
             
-            NotificationCenter.default.removeObserver(self, name: .AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
+            NotificationCenter.default.removeObserver(self, name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
             
             let messageDic = ["type":"sync", "ring":false] as [String : Any]
             NotificationCenter.default.post(name: DeviceManager.DeviceStatusChanged, object: nil, userInfo: messageDic)
@@ -321,7 +321,7 @@ class DeviceManager : NSObject {
     @objc private func audioSessionInterrupted(_ notification:Notification)
     {
         print("audioSessionInterrupted: \(notification)")
-        NotificationCenter.default.removeObserver(self, name: .AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
+        NotificationCenter.default.removeObserver(self, name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         
         let messageDic = ["type":"sync", "ring":false] as [String : Any]
         NotificationCenter.default.post(name: DeviceManager.DeviceStatusChanged, object: nil, userInfo: messageDic)

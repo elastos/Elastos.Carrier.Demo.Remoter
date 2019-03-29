@@ -497,6 +497,7 @@
 				17C508151E139F990068A76A /* Resources */,
 				D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */,
 				170720FA1E8116D10030AAED /* Report warning for TODO & FIXME comments */,
+				277B9FC9224E2A4A00E7F990 /* Codesign For ElastosCarrierSDK */,
 			);
 			buildRules = (
 			);
@@ -538,6 +539,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -580,7 +582,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.cpp\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.cpp\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
+		277B9FC9224E2A4A00E7F990 /* Codesign For ElastosCarrierSDK */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Codesign For ElastosCarrierSDK";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh\"\n";
 		};
 		D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -599,7 +619,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo-frameworks.sh\"\n\"${PODS_ROOT}/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarrierDemo/Pods-CarrierDemo-frameworks.sh\"\n\"${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7AD7CD045908BACE99BEA99 /* [CP] Check Pods Manifest.lock */ = {
@@ -798,14 +818,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/FFmpeg/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.elastos.carrier-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.elastos.carrier-demo3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CarrierDemo/CarrierDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Debug;
@@ -830,13 +850,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/FFmpeg/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.elastos.carrier-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.elastos.carrier-demo3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "CarrierDemo/CarrierDemo-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = arm64;
 			};
 			name = Release;

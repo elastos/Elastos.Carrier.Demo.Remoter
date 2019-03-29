@@ -182,18 +182,18 @@ extension DeviceInfoViewController {
             textField.text = text
             textField.keyboardType = keyboardType
             textField.clearButtonMode = .whileEditing
-            NotificationCenter.default.addObserver(self, selector: #selector(self.alertTextFieldDidChange), name: .UITextFieldTextDidChange, object: textField)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.alertTextFieldDidChange), name: UITextField.textDidChangeNotification, object: textField)
         }
         
         let cancelAction = UIAlertAction(title: "取消", style: .cancel) {
             [unowned self] _ in
-            NotificationCenter.default.removeObserver(self, name: .UITextFieldTextDidChange, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UITextField.textDidChangeNotification, object: nil)
         }
         alertController.addAction(cancelAction)
         
         let okAction = UIAlertAction(title: "确定", style: .default) {
             [unowned self] _ in
-            NotificationCenter.default.removeObserver(self, name: .UITextFieldTextDidChange, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UITextField.textDidChangeNotification, object: nil)
             let textField = alertController.textFields!.first!
             self.perform(selector, with: textField.text)
         }
