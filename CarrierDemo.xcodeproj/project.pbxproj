@@ -497,6 +497,7 @@
 				17C508151E139F990068A76A /* Resources */,
 				D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */,
 				170720FA1E8116D10030AAED /* Report warning for TODO & FIXME comments */,
+				277B9FC9224E2A4A00E7F990 /* Codesign For ElastosCarrierSDK */,
 			);
 			buildRules = (
 			);
@@ -582,6 +583,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.cpp\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
+		277B9FC9224E2A4A00E7F990 /* Codesign For ElastosCarrierSDK */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Codesign For ElastosCarrierSDK";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/ElastosCarrierSDK/ElastosCarrier-framework/CocoaPods/codesigncarrierframework.sh\"\n";
 		};
 		D84ACD7F31E3BE0CD19AF9D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
