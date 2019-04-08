@@ -49,4 +49,4 @@ Run on Phone with iOS version 9.0 or higher.
 
 ## License
 
-MIT
+GPLv3
