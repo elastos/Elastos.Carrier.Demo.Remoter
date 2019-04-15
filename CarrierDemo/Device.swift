@@ -1,6 +1,6 @@
 import Foundation
 import AVFoundation
-import ElastosCarrier
+import ElastosCarrierSDK
 
 class Device {
     var deviceInfo : CarrierFriendInfo
