@@ -1,5 +1,5 @@
 import UIKit
-import ElastosCarrier
+import ElastosCarrierSDK
 
 class DeviceListViewController: UITableViewController {
 

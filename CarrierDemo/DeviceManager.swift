@@ -1,7 +1,7 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
-import ElastosCarrier
+import ElastosCarrierSDK
 
 class DeviceManager : NSObject {
     fileprivate static let checkURL = "https://apache.org"
@@ -18,7 +18,7 @@ class DeviceManager : NSObject {
     
     var status = CarrierConnectionStatus.Disconnected;
     @objc(carrierInst)
-    var carrierInst: ElastosCarrier.Carrier!
+    var carrierInst: ElastosCarrierSDK.Carrier!
     var devices = [Device]()
     
 // MARK: - Private variables

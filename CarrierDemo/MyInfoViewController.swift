@@ -1,5 +1,5 @@
 import Foundation
-import ElastosCarrier
+import ElastosCarrierSDK
 import QRCode
 
 class MyInfoController: UIViewController {

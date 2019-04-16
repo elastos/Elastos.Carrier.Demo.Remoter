@@ -1,5 +1,5 @@
 import Foundation
-import ElastosCarrier
+import ElastosCarrierSDK
 
 class DeviceInfoViewController : UITableViewController {
     var device : Device?
