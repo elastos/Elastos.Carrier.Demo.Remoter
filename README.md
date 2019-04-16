@@ -37,6 +37,12 @@ $ sudo gem install cocoapods
 $ pod install
 ```
 
+Notices: If some issues happen, try fix it with command below:
+
+```shell
+$ pod update
+```
+
 Finally, use **Xcode** to open project file **CarrierDemo.xcworkspace** or directly run the following command to open it so as to build the whole workspace:
 
 ```shell

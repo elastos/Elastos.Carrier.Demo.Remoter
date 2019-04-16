@@ -1,9 +1,9 @@
 PODS:
-  - ElastosCarrierSDK (5.2.2)
+  - ElastosCarrierSDK (5.2.4)
   - QRCode (2.0)
 
 DEPENDENCIES:
-  - ElastosCarrierSDK
+  - ElastosCarrierSDK (= 5.2.4)
   - QRCode (~> 2.0)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - QRCode
 
 SPEC CHECKSUMS:
-  ElastosCarrierSDK: 3874348a2716e3f0b949f46e37bd88792e314983
+  ElastosCarrierSDK: 8ec88250bd237ef87568b9fd0e64e82f8b084ec6
   QRCode: f98a1886c8f37523704a7512a4c0cd45b34c18a4
 
-PODFILE CHECKSUM: c742898e77482b424245051d1f34c4f0475a0f57
+PODFILE CHECKSUM: 85927f1b6fce3d82a4b3f768fb97386ec1a9074b
 
 COCOAPODS: 1.6.1
