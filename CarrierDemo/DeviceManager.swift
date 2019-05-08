@@ -78,31 +78,35 @@ class DeviceManager : NSObject {
                 let options = CarrierOptions()
                 options.bootstrapNodes = [BootstrapNode]()
 
-                let bootstrapNode = BootstrapNode()
-                bootstrapNode.ipv4 = "13.58.208.50"
-                bootstrapNode.port = "33445"
-                bootstrapNode.publicKey = "89vny8MrKdDKs7Uta9RdVmspPjnRMdwMmaiEW27pZ7gh"
-                options.bootstrapNodes?.append(bootstrapNode)
+                let bootstrapNode0 = BootstrapNode()
+                bootstrapNode0.ipv4 = "13.58.208.50"
+                bootstrapNode0.port = "33445"
+                bootstrapNode0.publicKey = "89vny8MrKdDKs7Uta9RdVmspPjnRMdwMmaiEW27pZ7gh"
+                options.bootstrapNodes?.append(bootstrapNode0)
 
-                bootstrapNode.ipv4 = "18.216.102.47"
-                bootstrapNode.port = "33445"
-                bootstrapNode.publicKey = "G5z8MqiNDFTadFUPfMdYsYtkUDbX5mNCMVHMZtsCnFeb"
-                options.bootstrapNodes?.append(bootstrapNode)
+                let bootstrapNode1 = BootstrapNode()
+                bootstrapNode1.ipv4 = "18.216.102.47"
+                bootstrapNode1.port = "33445"
+                bootstrapNode1.publicKey = "G5z8MqiNDFTadFUPfMdYsYtkUDbX5mNCMVHMZtsCnFeb"
+                options.bootstrapNodes?.append(bootstrapNode1)
 
-                bootstrapNode.ipv4 = "18.216.6.197"
-                bootstrapNode.port = "33445"
-                bootstrapNode.publicKey = "H8sqhRrQuJZ6iLtP2wanxt4LzdNrN2NNFnpPdq1uJ9n2"
-                options.bootstrapNodes?.append(bootstrapNode)
+                let bootstrapNode2 = BootstrapNode()
+                bootstrapNode2.ipv4 = "18.216.6.197"
+                bootstrapNode2.port = "33445"
+                bootstrapNode2.publicKey = "H8sqhRrQuJZ6iLtP2wanxt4LzdNrN2NNFnpPdq1uJ9n2"
+                options.bootstrapNodes?.append(bootstrapNode2)
 
-                bootstrapNode.ipv4 = "54.223.36.193"
-                bootstrapNode.port = "33445"
-                bootstrapNode.publicKey = "5tuHgK1Q4CYf4K5PutsEPK5E3Z7cbtEBdx7LwmdzqXHL"
-                options.bootstrapNodes?.append(bootstrapNode)
+                let bootstrapNode3 = BootstrapNode()
+                bootstrapNode3.ipv4 = "54.223.36.193"
+                bootstrapNode3.port = "33445"
+                bootstrapNode3.publicKey = "5tuHgK1Q4CYf4K5PutsEPK5E3Z7cbtEBdx7LwmdzqXHL"
+                options.bootstrapNodes?.append(bootstrapNode3)
 
-                bootstrapNode.ipv4 = "52.83.191.228"
-                bootstrapNode.port = "33445"
-                bootstrapNode.publicKey = "3khtxZo89SBScAMaHhTvD68pPHiKxgZT6hTCSZZVgNEm"
-                options.bootstrapNodes?.append(bootstrapNode)
+                let bootstrapNode4 = BootstrapNode()
+                bootstrapNode4.ipv4 = "52.83.191.228"
+                bootstrapNode4.port = "33445"
+                bootstrapNode4.publicKey = "3khtxZo89SBScAMaHhTvD68pPHiKxgZT6hTCSZZVgNEm"
+                options.bootstrapNodes?.append(bootstrapNode4)
 
                 options.udpEnabled = true
                 options.persistentLocation = carrierDirectory
